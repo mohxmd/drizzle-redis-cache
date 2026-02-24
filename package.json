@@ -1,0 +1,73 @@
+{
+  "name": "drizzle-redis-cache",
+  "version": "0.1.0",
+  "description": "Redis cache adapters for Drizzle ORM — ioredis (Node.js) and Bun native Redis.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./ioredis": {
+      "types": "./dist/ioredis.d.ts",
+      "default": "./dist/ioredis.js"
+    },
+    "./bun": {
+      "types": "./dist/bun.d.ts",
+      "default": "./dist/bun.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "rm -rf dist && tsc --project tsconfig.json",
+    "check-types": "tsc --project tsconfig.json --noEmit",
+    "prepublishOnly": "tsc --project tsconfig.json"
+  },
+  "keywords": [
+    "drizzle",
+    "drizzle-orm",
+    "cache",
+    "redis",
+    "ioredis",
+    "bun"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohxmd/drizzle-redis-cache.git",
+    "directory": "packages/drizzle-redis-cache"
+  },
+  "bugs": {
+    "url": "https://github.com/mohxmd/drizzle-redis-cache/issues"
+  },
+  "homepage": "https://github.com/mohxmd/drizzle-redis-cache#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20",
+    "bun": ">=1.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "drizzle-orm": ">=0.45",
+    "ioredis": ">=5.0"
+  },
+  "peerDependenciesMeta": {
+    "ioredis": {
+      "optional": true
+    }
+  },
+  "dependencies": {}
+}
