@@ -57,7 +57,9 @@
   },
   "sideEffects": false,
   "devDependencies": {
+    "@types/bun": "^1.2.8",
     "@types/node": "^25.3.0",
+    "ioredis": "^5.9.3",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
